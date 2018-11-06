@@ -1,5 +1,5 @@
  bool isPrime(int n){
- 	int sq=sqrt(n);
+ 	int sq=sqrt(n),i;
  	if(n==1||n%2==0)
  		return false;
  	if(n==2)
