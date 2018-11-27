@@ -39,3 +39,21 @@ sort(v.rbegin(),v.rend());  //sort vector in descending order
 
 string s= "..."
 sort(s.begin(),s.end());  //sorts string lexicographically
+
+//Making own comparison operators in structure
+struct P {
+  int x, y;
+  bool operator<(const P &p) {
+    if (x != p.x) return x < p.x;
+    else return y < p.y;
+  }
+};
+
+//Comparison Functions
+bool comp(string a, string b) {
+  if (a.size() != b.size()) return a.size() < b.size();
+  return a < b;
+}
+
+//Now a vector of strings can be sorted as follows
+sort(v.begin(), v.end(), comp);
