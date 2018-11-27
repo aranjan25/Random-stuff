@@ -34,3 +34,8 @@ typedef pair<int, int> pi;
 #define sq(a) (a)*(a)   //sq(3+3) corresponds to (3+3)*(3+3)
 //than
 #define sq(a) a*a       //sq(3+3) corresponds to 3+3*3+3
+
+sort(v.rbegin(),v.rend());  //sort vector in descending order
+
+string s= "..."
+sort(s.begin(),s.end());  //sorts string lexicographically
