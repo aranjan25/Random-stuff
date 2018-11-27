@@ -57,3 +57,20 @@ bool comp(string a, string b) {
 
 //Now a vector of strings can be sorted as follows
 sort(v.begin(), v.end(), comp);
+
+//lower_bound returns a pointer to the first array element whose value is atleast x
+//upper_bound returns a pointer to the first array element whose value is larger than x
+
+//the following code finds out whether an array contains an element with value x
+auto k = lower_bound(array,array+n,x)-array;
+if (k < n && array[k] == x) {
+  // x found at index k
+}
+
+//To find frequency of 'x' in a sorted array
+auto a = lower_bound(array, array+n, x);
+auto b = upper_bound(array, array+n, x);
+freq=b-a;
+//OR
+auto r = equal_range(array, array+n, x);
+cout << r.second-r.first << "\n";
