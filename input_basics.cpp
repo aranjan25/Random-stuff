@@ -6,3 +6,7 @@ getline(cin,s);
 while(cin>>x){
   //code
 }
+
+//Inputting and outputting using files
+freopen("input.txt", "r", stdin);
+freopen("output.txt", "w", stdout);
