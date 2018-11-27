@@ -43,3 +43,27 @@ cout << s.count(5) << "\n"; // 0
 //OR
 s.erase(s.find(5));
 cout << s.count(5) << "\n"; // 2
+
+//MAP
+
+//syntax for declaration
+map<key_data_type, key_value_data_type> m;
+//Example
+m["monkey"] = 4;
+m["banana"] = 3;
+m["harpsichord"] = 9;
+cout << m["banana"] << "\n"; // 3
+
+//If key is absent, key value is zero by default if requested
+map<string,int> m;
+cout << m["aybabtu"] << "\n"; // 0
+
+m.count(key);  //checks if key is declared (present) or not
+m.count("banana");  //true
+m.count("subscribe_pewdiepie");   //false
+
+//Iterating through a map
+for (auto x : m) {
+cout << x.first << " " << x.second << "\n";
+}
+
