@@ -74,3 +74,17 @@ freq=b-a;
 //OR
 auto r = equal_range(array, array+n, x);
 cout << r.second-r.first << "\n";
+
+//Finding the index (k) at which value of function (f) changes (function is FALSE before k and TRUE after and at k)
+int x = -1;
+for (int b = n; b >= 1; b /= 2) {
+  while (!f(x+b)) x += b;
+}
+int k = x+1;
+
+//Finding index (k) at which function is maximum
+int x = -1;
+for (int b = n; b >= 1; b /= 2) {
+  while (f(x+b) < f(x+b+1)) x += b;
+}
+int k = x+1;
