@@ -20,3 +20,17 @@ printf("%.20f\n",x);  //prints x with 20 decimal places etc.
 if (abs(a-b)<1e-9) {
   // a and b are equal
 }
+
+//Common ways of shortening code
+typedef vector<int> vi;
+typedef pair<int, int> pi;
+
+#define PB push_back
+#define MP make_pair
+
+#define REP(i,a,b) for (int i = a; i <= b; i++)
+
+//Better to use
+#define sq(a) (a)*(a)   //sq(3+3) corresponds to (3+3)*(3+3)
+//than
+#define sq(a) a*a       //sq(3+3) corresponds to 3+3*3+3
