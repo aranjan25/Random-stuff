@@ -67,3 +67,24 @@ for (auto x : m) {
 cout << x.first << " " << x.second << "\n";
 }
 
+//ITERATORS
+auto it=s.begin();    //OR
+set<int>::iterator it=s.begin();
+
+auto it=s.find(x);    //returns iterator to the position of 'x', if x not found then return s.end()
+
+//Element nearest to 'x'
+auto it = s.lower_bound(x);
+if (it == s.begin()) {
+  cout << *it << "\n";
+}
+else if (it == s.end()) {
+  it--;
+  cout << *it << "\n";
+} 
+else {
+  int a = *it; it--;
+  int b = *it;
+  if (x-b < a-x) cout << b << "\n";
+  else cout << a << "\n";
+}
