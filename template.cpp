@@ -6,6 +6,7 @@ using namespace std;
 #define int long long
 
 typedef vector<int> vi;
+#define PB push_back
 #define REP(i,a,b) for(i=a; i<b; i++)
 
 const int N=1e5+5;
