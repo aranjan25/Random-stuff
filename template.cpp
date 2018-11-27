@@ -6,13 +6,13 @@ using namespace std;
 #define int long long
 
 typedef vector<int> vi;
-#define REP(i,a,b) for (i = a; i <= b; i++)
+#define REP(i,a,b) for(i=a; i<b; i++)
 
 const int N=1e5+5;
  
 int32_t main()
 {
 	IOS;
-  
+ 	 
 	return 0;
 }
