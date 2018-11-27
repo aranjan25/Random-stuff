@@ -4,7 +4,7 @@ string s;
 getline(cin,s);   //inputting string
 string s1,s2;
 
-s=s1+s2   //Combine strings
+s=s1+s2;   //Combine strings
 
 string a = s.substr(k,l);  //Substring of 's' starting at index 'k' and of length 'l'
 
@@ -21,7 +21,7 @@ s.insert(4);
 cout << s.count(3) << "\n"; // 0
 cout << s.count(4) << "\n"; // 1
 
-s.count(x)    //0 if absent or 1 if present
+s.count(x);    //0 if absent or 1 if present
   
 set<int> s = {2,5,6,8};
 cout << s.size() << "\n"; // 4
