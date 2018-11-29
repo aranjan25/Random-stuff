@@ -8,6 +8,14 @@ s=s1+s2;   //Combine strings
 
 string a = s.substr(k,l);  //Substring of 's' starting at index 'k' and of length 'l'
 
+//checking if s0 is a substring of s
+
+if(s.find(s0)!=string::npos){
+  //found
+}
+
+reverse(s.begin(),s.end());   //reversing a string
+
 //SET
 
 set<int> s;
