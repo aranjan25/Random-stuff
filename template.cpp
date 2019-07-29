@@ -27,11 +27,7 @@ int32_t main(){
     int t;
     cin>>t;
     while(t--){
-      int n;
-      cin>>n;
-      vector<int> a;
-      rep(i) {int inp;cin>>inp;a.PB(inp);}
-      cout<<solve(a)<<endl;
+        
     }
     return 0;
 }
