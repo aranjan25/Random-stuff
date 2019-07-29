@@ -2,27 +2,36 @@
 using namespace std;
 
 #define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define endl "\n"
 #define int long long
-#define pb push_back
-#define rep1(i,a,b) for(i=a;i<b;i++)
-#define rep0(i,c) rep1(i,0,c)
-#define rep(i) rep0(i,n)
-#define max(a,b) (((a)>(b))?(a):(b))
-#define max0(a,b,c) (max(max(a,b),c))
-#define min(a,b) (((a)<(b))?(a):(b))
-#define min0(a,b,c) (min(min(a,b),c))
+#define endl "\n"
 
-typedef vector<int> vi;
+#define PB push_back
+#define MP make_pair
+#define F first
+#define S second
+
+#define REP(i,a,b) for(int i=a;i<b;i++)
+#define rep(i) REP(i,0,n)
+
+#define MAX(a,b,c) (max(max(a,b),c))
+#define MIN(a,b,c) (min(min(a,b),c))
+
+typedef vector<int> VI;
+typedef pair<int,int> pii;
+typedef vector<int>::iterator Vit;
 
 const int N=1e9+7;
 
 int32_t main(){
-  IOS;
-  int t
-  cin>>t;
-  while(t--){
-
-  }
-  return 0;
+    IOS;
+    int t;
+    cin>>t;
+    while(t--){
+      int n;
+      cin>>n;
+      vector<int> a;
+      rep(i) {int inp;cin>>inp;a.PB(inp);}
+      cout<<solve(a)<<endl;
+    }
+    return 0;
 }
