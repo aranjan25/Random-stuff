@@ -16,18 +16,14 @@ using namespace std;
 #define MAX(a,b,c) (max(max(a,b),c))
 #define MIN(a,b,c) (min(min(a,b),c))
 
-typedef vector<int> VI;
+typedef vector<int> vi;
 typedef pair<int,int> pii;
-typedef vector<int>::iterator Vit;
+typedef vector<int>::iterator vit;
 
 const int N=1e9+7;
 
 int32_t main(){
     IOS;
-    int t;
-    cin>>t;
-    while(t--){
-        
-    }
+    
     return 0;
 }
