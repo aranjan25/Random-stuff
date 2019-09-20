@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//Time complexity O(V+E)
+
 void dfs(int u, vector<bool> &vis, vector<vector<int> >g){
     vis[u]=true;
     for(int i=0;i<g[u].size();i++){
