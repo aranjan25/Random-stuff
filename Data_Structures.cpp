@@ -68,15 +68,24 @@ cout << m["aybabtu"] << "\n"; // 0
 
 m.count(key);  //checks if key is declared (present) or not
 m.count("banana");  //true
-m.count("subscribe_pewdiepie");   //false
+m.count("subscribe_to_pewdiepie");   //false
 
 //Iterating through a map
 for (auto x : m) {
 cout << x.first << " " << x.second << "\n";
 }
 
+//Note:
+void f(const map< string, int >& M) {
+  if(M["the meaning"] == 42) { // Error! Cannot use [] on const map objects!
+  }
+  if(M.find("the meaning") != M.end() && M.find("the meaning")->second == 42) { // Correct
+    cout << "Don't Panic!" << endl;
+  }
+}
+
 //ITERATORS
-auto it=s.begin();    //OR
+
 set<int>::iterator it=s.begin();
 
 auto it=s.find(x);    //returns iterator to the position of 'x', if x not found then return s.end()
@@ -96,3 +105,56 @@ else {
   if (x-b < a-x) cout << b << "\n";
   else cout << a << "\n";
 }
+
+//set also has an interval constructor
+int arr[]={3,4,5,2,1};
+set<int> s(arr, arr+5); // {1,2,3,4,5}
+
+Given vector<int> v
+set<int> s(all(v));
+vector<int> v1(all(s)); //v1 contains all elements of v in ascending order and without duples
+
+//VECTORS
+
+int arr[]={2,3,5,7,11,13,17,19,23,29,31,37,41};
+vector< int > v(arr, arr+sizeof(arr)/sizeof(arr[0]));
+vector< int > v2(v.begin(),v.begin()+v.size()/2); // {2, 3, 5, 7, 11, 13}
+vector< int > v3(v.rbegin()+v.size()/2,v.rend()); // {13, 11, 7, 5, 3, 2}
+
+Function: find(v.begin(), v.end(), value)
+  if not found
+    returns v.end()
+  else 
+    returns index of 1st occurence
+
+Function: min_element(v.begin(), v.end())
+  returns iterator to minimum element
+
+Function: max_element(v.begin(), v.end())
+  returns: iterator to maximum element
+  
+int arr[]={2,10,7,1,9};
+vector< int > v(arr, arr + sizeof(arr)/sizeof(arr[0]) );
+int a1 = *max_element(v.begin(), v.end() ); // 10, the largest element
+int a2 = min_element(v.begin(), v.end() ) - v.begin(); // 3, the index of smallest element
+
+Use //for any container
+  #define sz(a) int((a).size())
+  #define all(v) (v).begin(), (v).end()
+  #define tr(c,it) for(typeof((c).begin()) it=(c).begin(); it!=(c).end(); it++) 
+  #define pres(c,val) ((c).find(val) != (c).end())   //works in O(log n) for set
+  #define cpres(c,val) (find(all(c), val) != (c).end())    //usually for vectors
+
+Function: v.insert(i, value)
+  inserts value at index i and shifts others to right
+
+Function: v.insert(i, begin, end) // (e.g. v.insert(i, all(v2)) )
+  inserts range of values starting from index i and shifts others to right
+  
+Function: erase(iterator)
+  erases single element
+  
+Function: erase(iterator_begin, iterator_end)
+  erases range of elements
+
+Use
