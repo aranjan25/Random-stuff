@@ -5,6 +5,12 @@ using namespace std;
 #define int long long
 #define endl "\n"
 
+#define sz(a) int((a).size())
+#define all(v) (v).begin(), (v).end()
+#define tr(c,it) for(typeof((c).begin()) it=(c).begin(); it!=(c).end(); it++)
+#define pres(c,val) ((c).find(val) != (c).end())
+#define cpres(c,val) (find(all(c), val) != (c).end())
+
 #define PB push_back
 #define MP make_pair
 #define F first
