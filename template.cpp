@@ -7,7 +7,7 @@ using namespace std;
 
 #define sz(a) int((a).size())
 #define all(v) (v).begin(), (v).end()
-#define tr(c,it) for(typeof((c).begin()) it=(c).begin(); it!=(c).end(); it++)
+#define tr(c,it) for(decltype((c).begin()) it=(c).begin(); it!=(c).end(); it++)
 #define pres(c,val) ((c).find(val) != (c).end())
 #define cpres(c,val) (find(all(c), val) != (c).end())
 
