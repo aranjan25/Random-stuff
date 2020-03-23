@@ -57,7 +57,7 @@ void solve() {
 int32_t main(int32_t argc, char** argv) {
     fastio;
     #ifdef ZARK
-    freopen("txt.in", "r", stdin);
+    freopen("input.in", "r", stdin);
     #endif
     // freopen("txt.in", "r", stdin);
     // freopen("txt.out", "w", stdout);
