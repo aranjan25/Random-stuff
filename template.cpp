@@ -40,7 +40,7 @@ void zark() {
     #ifdef ZARK
     auto end_time = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> diff = end_time - start_time;
-    cerr << "Time Taken : "<< diff.count() << "s\n";
+    cerr << "Time Taken : " << diff.count() << "s\n";
     #endif
 }
 
